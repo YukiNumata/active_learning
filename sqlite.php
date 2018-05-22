@@ -22,6 +22,7 @@ try {
     )");
 
     // 挿入（プリペアドステートメント）
+    
 
 	// $pdo->exec("INSERT INTO fruit(name, price) VALUES ('りんご', '200')");
 	// $pdo->exec("INSERT INTO fruit(name, price) VALUES ('バナナ', '200')");
