@@ -18,11 +18,12 @@ try {
     $pdo->exec("CREATE TABLE IF NOT EXISTS fruit(
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         name VARCHAR(10),
-        price INTEGER
+        price INTEGER,
+        year INTEGER,
     )");
 
     // 挿入（プリペアドステートメント）
-    
+
 
 	// $pdo->exec("INSERT INTO fruit(name, price) VALUES ('りんご', '200')");
 	// $pdo->exec("INSERT INTO fruit(name, price) VALUES ('バナナ', '200')");
@@ -34,8 +35,8 @@ try {
 
     // 選択 (プリペアドステートメント)
 	// $pdo->exec("SELECT * FROM fruit WHERE price = 200");
-    $stmt = $pdo->prepare("SELECT * FROM fruit WHERE price = ?");
-    $stmt->execute(['200']);
+    $stmt = $pdo->prepare("SELECT * FROM fruit WHERE year = ?");
+    $stmt->execute(['2018']);
     $r = $stmt->fetchAll();
 
     // 結果を確認
