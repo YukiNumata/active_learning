@@ -1,0 +1,5 @@
+numata,19,Kobe
+John,19,San Francisco
+Michael,39,Florida
+Lui,30
+yuk,20,taiwan
